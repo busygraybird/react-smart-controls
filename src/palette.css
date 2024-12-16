@@ -1,0 +1,19 @@
+:root {
+  --base-border-radius: 8px;
+
+  /* INPUT */
+  --input-background-color: rgba(0,0,0,0.03);
+  --input-border-color: #d7d7d7;
+  --input-border: 1px solid var(--input-border-color);
+  --input-border-radius: var(--base-border-radius);
+  /* INPUT focused */
+  --input-focused-border-color: #38653e;
+  --input-focused-border: 1px solid var(--input-focused-border-color);
+  /* INPUT error */
+  --input-error-border-color: rgba(172,4,0,0.73);
+  --input-error-background-color: rgba(172,4,0,0.05);
+
+  /* BUTTON */
+  --button-border-radius: var(--base-border-radius);
+  --button-background-color: rgba(199, 199, 199, 0.5);
+}

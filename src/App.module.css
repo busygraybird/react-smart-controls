@@ -1,0 +1,8 @@
+@import 'palette.css';
+
+.controls {
+  padding: 8px;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}

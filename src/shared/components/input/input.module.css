@@ -1,0 +1,27 @@
+.input {
+  padding: 6px 6px 5px;
+  border: none;
+  border-bottom: var(--input-border);
+  border-radius: var(--input-border-radius);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: var(--input-background-color);
+}
+
+.input:focus,
+.input:focus-within,
+.input:active {
+  border-bottom-color: var(--input-focused-border-color);
+  outline: none;
+}
+
+.input_error {
+  background-color: var(--input-error-background-color);
+  border-bottom-color: var(--input-error-border-color);
+}
+
+.input_error.input:focus,
+.input_error.input:focus-within,
+.input_error.input:active {
+  border-bottom-color: var(--input-error-border-color);
+}

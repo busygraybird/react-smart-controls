@@ -1,0 +1,73 @@
+{
+  "extends": ["plugin:prettier/recommended", "plugin:react-hooks/recommended", "plugin:import/recommended"],
+  "plugins": ["import", "prettier", "@typescript-eslint", "unused-imports", "mobx", "react-hooks", "react"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
+        "moduleDirectory": ["node_modules"],
+        "paths": ["src"]
+      },
+      "typescript": {}
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "import/no-anonymous-default-export": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "ignoreComments": true
+      }
+    ],
+    "no-console": ["error", { "allow": ["error"] }],
+    "quotes": ["warn", "single"],
+    "semi": ["warn", "always"],
+    "import/order": [
+      "warn",
+      {
+        "groups": [["builtin", "external"], "internal", "type", "parent", "sibling", "index"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "warnOnUnassignedImports": false,
+        "pathGroupsExcludedImportTypes": ["./*.module.scss"],
+        "pathGroups": [
+          {
+            "pattern": "./*.module.scss",
+            "group": "index"
+          }
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/no-relative-packages": "warn",
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "semi": true,
+        "printWidth": 120
+      }
+    ],
+    "react/jsx-key": ["error"],
+    "react-hooks/exhaustive-deps": "error",
+    "mobx/missing-make-observable": "error",
+    "mobx/unconditional-make-observable": "error",
+    "mobx/no-anonymous-observer": "error",
+    "react/display-name": "warn",
+    "require-yield": "error",
+    "unused-imports/no-unused-imports": ["warn"],
+    "import/no-duplicates": "warn",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      {
+        "prefer": "type-imports",
+        "disallowTypeAnnotations": false
+      }
+    ]
+  }
+}
